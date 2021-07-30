@@ -15,6 +15,15 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            border-radius: 20px;
+            /* The width is the width of the web page */
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -30,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Journey</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -48,11 +57,11 @@
                     </div>
                 <!-- </div> -->
                 <div class="d-flex justify-content-center">
-                  <div class="col-md-5" style="text-align: center;">
+                  <div class="col-md-5">
                     <div class="masthead-heading">Muhammad <span style="color: #ffc800;">Aziz</span> Syafryadi</div>
                   </div>
                 </div>
-                <div style="padding-bottom: 20px;">
+                <!-- <div style="padding-bottom: 20px;">
                   <div>
                     <i>Jangan <span style="color: #ffc800;">takut</span></i>
                     <i>Jangan <span style="color: #ffc800;">khawatir</span></i>
@@ -60,7 +69,51 @@
                     <i>Ini <span style="color: #ffc800;">kentut</span></i>
                     <i>Bukan <span style="color: #ffc800;">petir</span></i>
                   </div>
-                </div>
+                </div> -->
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div style="padding-bottom: 60px;">
+                            <i>Jangan <span style="color: #ffc800;">takut</span></i>
+                            <i>Jangan <span style="color: #ffc800;">khawatir</span></i>
+                            <br>
+                            <i>Ini <span style="color: #ffc800;">kentut</span></i>
+                            <i>Bukan <span style="color: #ffc800;">petir</span></i>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div style="padding-bottom: 60px;">
+                            <i>learn to <span style="color: #ffc800;">life</span></i>
+                            <br>
+                            <i>life <span style="color: #ffc800;">to learn</span></i>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div style="padding-bottom: 60px;">
+                            <i>Jangan <span style="color: #ffc800;">takut</span></i>
+                            <i>Jangan <span style="color: #ffc800;">khawatir</span></i>
+                            <br>
+                            <i>Ini <span style="color: #ffc800;">kentut</span></i>
+                            <i>Bukan3 <span style="color: #ffc800;">petir</span></i>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
                 <!-- <a class="btn btn-primary btn-xl text-uppercase" href="#services">About me</a> -->
             </div>
         </header>
@@ -104,7 +157,7 @@
         <section class="page-section bg-light" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h2 class="section-heading text-uppercase">Journey</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <ul class="timeline">
@@ -153,7 +206,7 @@
                             <h4>
                                 Be Part
                                 <br />
-                                Of Our
+                                Of My
                                 <br />
                                 Story!
                             </h4>
@@ -162,23 +215,81 @@
                 </ul>
             </div>
         </section>
-        
-        <!-- Clients-->
-        <div class="py-5">
+        <section class="page-section">
             <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My area</h2>
+                </div>
+                <div>
+                    <!--The div element for the map -->
+                    <div id="map"></div>
+                    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsEGNB1oaycsk7zmr24J8YKaN1wJS2Km0&callback=initMap&libraries=&v=weekly"
+                        async
+                    ></script>
+                    <script>
+                        function initMap() {
+                        // The location of Uluru
+                        const uluru = { lat: -6.306797, lng: 106.816794 };
+                        // The map, centered at Uluru
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 15,
+                            center: uluru,
+                        });
+                        // The marker, positioned at Uluru
+                        const marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map,
+                        });
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+        <!-- Clients-->
+        <div class="page-section bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Interest</h2>
+                </div>
                 <div class="row align-items-center">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/node.svg" alt="..." /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/reactnative.png" alt="..." /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/Unofficial_JavaScript_logo_2.svg" alt="..." /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/Firebase_Logo.svg" alt="..." /></a>
                     </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/Google_2015_logo.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/icons8-xcode.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/getpostman-ar21.svg" alt="..." /></a>
+                    </div>
+                    <!-- <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/RHCP_Logo.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/Queen_logo.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/pinkfloyd.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/getpostman-ar21.svg" alt="..." /></a>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -229,12 +340,27 @@
                   <!-- This is what your users will see when the form-->
                   <!-- has successfully submitted-->
                   <div class="d-none" id="submitSuccessMessage">
-                      <div class="text-center text-white mb-3">
-                          <div class="fw-bolder">Form submission successful!</div>
-                          visit my instagram at 
-                          <br />
-                          <a href="https://www.instagram.com/azsyfryd/">https://www.instagram.com/azsyfryd/</a>
-                      </div>
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission <span style="color: #ffc800;">not successful!</span> </div>
+                            <div class="fw-bolder">You can contact me at down below</div>
+                            <br />
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-lg-start">
+                                    <!-- Copyright &copy; azizCatfish 2021 -->
+                                </div>
+                                <div class="col-lg-4 my-3 my-lg-0" style="background-color: white;padding: 5px;">
+                                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.instagram.com/azsyfryd/"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.facebook.com/muhammad.aziz.7902/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.linkedin.com/in/muhammad-aziz-326323173/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://github.com/azrst"><i class="fab fa-github"></i></a>
+                                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://wa.me/+6285156075355"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                                <div class="col-lg-4 text-lg-end">
+                                    <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a> -->
+                                </div>
+                            </div>
+                        </div>
                   </div>
                   <!-- Submit error message-->
                   <!---->
@@ -253,8 +379,10 @@
                     <div class="col-lg-4 text-lg-start">Copyright &copy; azizCatfish 2021</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.instagram.com/azsyfryd/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.facebook.com/muhammad.aziz.7902/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.linkedin.com/in/muhammad-aziz-326323173/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://github.com/azrst"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://wa.me/+6285156075355"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>

@@ -11271,7 +11271,7 @@ header.masthead .masthead-heading {
 .team-member img {
   width: 14rem;
   height: 14rem;
-  border: 0.5rem solid #ffc800;
+  border: 0.5rem solid rgba(255, 200, 0, 0.7);
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
@@ -11279,7 +11279,8 @@ header.masthead .masthead-heading {
 }
 
 .img-brand {
-  height: 2.75rem;
+  /* height: 2.75rem; */
+  height: 4rem;
 }
 
 section#contact {
